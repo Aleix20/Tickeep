@@ -2,16 +2,19 @@ package edu.upf.tickeep
 
 
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.graphics.drawable.DrawableCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.Timestamp
+import edu.upf.tickeep.fragments.ticketFragment
 import edu.upf.tickeep.model.Ticket
 import edu.upf.tickeep.utils.Constants
 import java.text.SimpleDateFormat
@@ -98,6 +101,19 @@ class MyAdapter(private val ticketsList:ArrayList<Ticket>):RecyclerView.Adapter<
             holder.txtStatus.text = "Not available"
             holder.imgStatus.setImageResource(R.drawable.status_red)
         }
+        holder.itemView.setOnClickListener(object : View.OnClickListener{
+            override fun onClick(v: View?) {
+
+                val activity = v!!.context as AppCompatActivity
+                val fragment = activity.supportFragmentManager.beginTransaction()
+                val fragmentWithObject = ticketFragment().apply {
+                    arguments = Bundle().apply { putParcelable("item", currentItem) }
+                }
+                fragment.replace(R.id.fragment_container,fragmentWithObject).commit()
+            }
+        })
+
+
     }
 
     override fun getItemCount(): Int {

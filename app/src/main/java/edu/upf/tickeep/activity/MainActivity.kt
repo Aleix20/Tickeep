@@ -17,10 +17,12 @@ class MainActivity : AppCompatActivity() {
         buttonSignup.setOnClickListener {
             val intent = Intent(this, register::class.java)
             startActivity(intent)
+            finish()
         }
         buttonSignIn.setOnClickListener {
             val intent = Intent(this, login::class.java)
             startActivity(intent)
+            finish()
         }
     }
 

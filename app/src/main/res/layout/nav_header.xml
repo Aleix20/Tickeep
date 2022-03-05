@@ -6,41 +6,40 @@
     android:layout_height="200dp"
     android:background="@drawable/background">
 
-    <TextView
-        android:id="@+id/txt_userNav"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
-        android:layout_marginBottom="7dp"
-        android:text="TextView"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/txt_emailNav"
-        app:layout_constraintStart_toStartOf="@+id/txt_emailNav"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="20dp">
 
-    <TextView
-        android:id="@+id/txt_emailNav"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="175dp"
-        android:text="TextView"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/img_navheader"
-        app:layout_constraintTop_toBottomOf="@+id/txt_userNav" />
+        <ImageView
+            android:id="@+id/img_navheader"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            app:srcCompat="@mipmap/ic_launcher_round" />
 
-    <ImageView
-        android:id="@+id/img_navheader"
-        android:layout_width="0dp"
-        android:layout_height="105dp"
-        android:layout_marginStart="39dp"
-        android:layout_marginEnd="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/txt_emailNav"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_launcher_round" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_userNav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txt_emailNav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

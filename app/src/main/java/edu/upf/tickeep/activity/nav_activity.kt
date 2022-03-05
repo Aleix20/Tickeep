@@ -58,8 +58,8 @@ class nav_activity : AppCompatActivity() , NavigationView.OnNavigationItemSelect
         menuInflater.inflate(R.menu.nav_menuoptions, menu)
         txtuser = findViewById(R.id.txt_userNav)
         txtEmail = findViewById(R.id.txt_emailNav)
-        imgNav = findViewById(R.id.img_navheader)
-        imgNav.setImageResource(R.mipmap.logo)
+        //imgNav = findViewById(R.id.img_navheader)
+        //imgNav.setImageResource(R.mipmap.logo)
 
         val c = edu.upf.tickeep.utils.Constants()
         c.firebaseFirestore.collection("users").document(c.firebaseAuth.currentUser?.uid.toString()).get().addOnSuccessListener {
@@ -68,7 +68,7 @@ class nav_activity : AppCompatActivity() , NavigationView.OnNavigationItemSelect
             txtEmail.text = user?.email.toString()
             txtuser.text = user?.user.toString()
         }
-        return true
+        return false
     }
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         drawer_layout.closeDrawer(GravityCompat.START)

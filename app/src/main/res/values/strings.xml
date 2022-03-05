@@ -51,4 +51,10 @@
     <string name="description">Description:</string>
     <string name="date">Date:</string>
     <string name="ticket_name">Ticket Name</string>
+    <string name="view_qr">View QR</string>
+    <string name="total_eur">Total EUR:</string>
+    <string name="credit_card_eur">Credit card EUR:</string>
+    <string name="change">Change:</string>
+    <string name="attached_empty">ATTACHED: EMPTY</string>
+    <string name="total_paid">Total paid:</string>
 </resources>

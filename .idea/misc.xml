@@ -6,6 +6,8 @@
         <entry key="..\:/Users/aleix/AndroidStudioProjects/Tickeep/app/src/main/res/drawable-v24/ic_favorite.xml" value="0.2125" />
         <entry key="..\:/Users/aleix/AndroidStudioProjects/Tickeep/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1945" />
         <entry key="..\:/Users/aleix/AndroidStudioProjects/Tickeep/app/src/main/res/drawable/backgroundactivity.xml" value="0.1045" />
+        <entry key="..\:/Users/aleix/AndroidStudioProjects/Tickeep/app/src/main/res/drawable/border.xml" value="0.101" />
+        <entry key="..\:/Users/aleix/AndroidStudioProjects/Tickeep/app/src/main/res/drawable/cicrculo_close.xml" value="0.101" />
         <entry key="..\:/Users/aleix/AndroidStudioProjects/Tickeep/app/src/main/res/drawable/ic_account.xml" value="0.1" />
         <entry key="..\:/Users/aleix/AndroidStudioProjects/Tickeep/app/src/main/res/drawable/ic_baseline_notification_important_24.xml" value="0.2125" />
         <entry key="..\:/Users/aleix/AndroidStudioProjects/Tickeep/app/src/main/res/drawable/ic_baseline_notification_important_24_yellow.xml" value="0.2125" />
@@ -40,11 +42,13 @@
         <entry key="..\:/Users/aleix/AndroidStudioProjects/Tickeep/app/src/main/res/layout/fragment_home.xml" value="0.22" />
         <entry key="..\:/Users/aleix/AndroidStudioProjects/Tickeep/app/src/main/res/layout/fragment_importants.xml" value="0.22" />
         <entry key="..\:/Users/aleix/AndroidStudioProjects/Tickeep/app/src/main/res/layout/fragment_slideshow.xml" value="0.14965277777777777" />
+        <entry key="..\:/Users/aleix/AndroidStudioProjects/Tickeep/app/src/main/res/layout/fragment_ticket.xml" value="0.18" />
         <entry key="..\:/Users/aleix/AndroidStudioProjects/Tickeep/app/src/main/res/layout/menu_layout.xml" value="0.55625" />
         <entry key="..\:/Users/aleix/AndroidStudioProjects/Tickeep/app/src/main/res/layout/nav_header.xml" value="0.18" />
         <entry key="..\:/Users/aleix/AndroidStudioProjects/Tickeep/app/src/main/res/layout/nav_header_homeactivity.xml" value="0.33" />
         <entry key="..\:/Users/aleix/AndroidStudioProjects/Tickeep/app/src/main/res/layout/nav_header_mainpage.xml" value="0.1" />
         <entry key="..\:/Users/aleix/AndroidStudioProjects/Tickeep/app/src/main/res/layout/nav_menu.xml" value="0.1" />
+        <entry key="..\:/Users/aleix/AndroidStudioProjects/Tickeep/app/src/main/res/layout/popup_QR.xml" value="0.1" />
         <entry key="..\:/Users/aleix/AndroidStudioProjects/Tickeep/app/src/main/res/layout/ticketitem.xml" value="0.25" />
         <entry key="..\:/Users/aleix/AndroidStudioProjects/Tickeep/app/src/main/res/layout/ticketsview.xml" value="0.25" />
         <entry key="..\:/Users/aleix/AndroidStudioProjects/Tickeep/app/src/main/res/menu/activity_main_drawer.xml" value="0.14965277777777777" />
