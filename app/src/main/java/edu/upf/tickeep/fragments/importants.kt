@@ -1,5 +1,6 @@
 package edu.upf.tickeep.fragments
 
+import android.app.AlertDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -25,7 +26,14 @@ class importants : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_importants, container, false)
-
+        var alert= AlertDialog.Builder(view.context)
+        alert.setMessage("After adding the ticket to favorites/important you must refresh the screen through the menu for the changes to take effect.")
+            .setCancelable(false).setPositiveButton("Okey"){
+                    a,b ->a.cancel()
+            }
+        val dialog = alert.create()
+        alert.setTitle("Important")
+        alert.show()
         ticketRecyclerView= view.findViewById(R.id.ticketsListImportants)
         ticketRecyclerView.layoutManager = LinearLayoutManager(view.context)
         ticketRecyclerView.setHasFixedSize(true)

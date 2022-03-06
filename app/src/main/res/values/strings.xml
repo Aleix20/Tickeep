@@ -57,4 +57,9 @@
     <string name="change">Change:</string>
     <string name="attached_empty">ATTACHED: EMPTY</string>
     <string name="total_paid">Total paid:</string>
+    <string name="pref_file">upf.edu.prefFile</string>
+    <string name="facebook_app_id">552396355878600</string>
+    <string name="fb_login_protocol_scheme">fb552396355878600</string>
+    <string name="error_facebook">"Error trying to login with facebook"</string>
+
 </resources>

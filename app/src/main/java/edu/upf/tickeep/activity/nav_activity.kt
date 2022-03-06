@@ -1,5 +1,6 @@
 package edu.upf.tickeep.activity
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
@@ -10,6 +11,8 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import com.facebook.login.LoginManager
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.toObject
@@ -52,6 +55,16 @@ class nav_activity : AppCompatActivity() , NavigationView.OnNavigationItemSelect
 
         changeFragment(home())
     }
+    override fun onBackPressed() {
+        val fm: FragmentManager = supportFragmentManager
+        if (fm.backStackEntryCount > 0) {
+
+            fm.popBackStack()
+        } else {
+
+            super.onBackPressed()
+        }
+    }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -86,7 +99,17 @@ class nav_activity : AppCompatActivity() , NavigationView.OnNavigationItemSelect
                 changeFragment(expireds())
             }
             R.id.logout -> {
+                val prefs2 = getSharedPreferences(getString(R.string.pref_file), Context.MODE_PRIVATE)
+                val prov = prefs2.getString("prov",null)
+                if(prov == "FACEBOOK"){
+                    LoginManager.getInstance().logOut()
+
+                }
+                val prefs = getSharedPreferences(getString(R.string.pref_file), Context.MODE_PRIVATE).edit()
+                prefs.clear()
+                prefs.apply()
                 Firebase.auth.signOut()
+
                 val intent = Intent(this, login::class.java)
                 startActivity(intent)
                 finish()

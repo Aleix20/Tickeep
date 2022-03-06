@@ -105,10 +105,12 @@ class MyAdapter(private val ticketsList:ArrayList<Ticket>):RecyclerView.Adapter<
             override fun onClick(v: View?) {
 
                 val activity = v!!.context as AppCompatActivity
-                val fragment = activity.supportFragmentManager.beginTransaction()
+
                 val fragmentWithObject = ticketFragment().apply {
                     arguments = Bundle().apply { putParcelable("item", currentItem) }
                 }
+                val fragment = activity.supportFragmentManager.beginTransaction().add(fragmentWithObject, "detail") // Add this transaction to the back stack (name is an optional name for this back stack state, or null).
+                    .addToBackStack(null)
                 fragment.replace(R.id.fragment_container,fragmentWithObject).commit()
             }
         })
