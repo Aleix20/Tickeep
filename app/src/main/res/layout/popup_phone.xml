@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/border"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtClose_imgPhone"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="end"
+        android:layout_margin="4dp"
+        android:background="@drawable/cicrculo_close"
+        android:gravity="center"
+        android:text="X"
+        android:textColor="@color/grey"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/editText_popUpPhone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/rounded_text_states"
+        android:ems="10"
+        android:hint="@string/phone"
+        android:inputType="textPersonName"
+        android:paddingStart="10dp" />
+
+    <Button
+        android:id="@+id/btnSave_popUpPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="#439CE8"
+        android:text="Save"
+        app:cornerRadius="50dp" />
+
+
+</LinearLayout>

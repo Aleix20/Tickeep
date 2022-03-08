@@ -8,4 +8,7 @@
     <item
         android:state_enabled="true"
         android:drawable="@drawable/rounded_text" />
+    <item
+        android:state_enabled="false"
+        android:drawable="@drawable/rounded_text" />
 </selector>

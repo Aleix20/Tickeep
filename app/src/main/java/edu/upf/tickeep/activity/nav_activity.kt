@@ -18,10 +18,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.toObject
 import com.google.firebase.ktx.Firebase
 import edu.upf.tickeep.R
-import edu.upf.tickeep.fragments.expireds
-import edu.upf.tickeep.fragments.favourites
-import edu.upf.tickeep.fragments.home
-import edu.upf.tickeep.fragments.importants
+import edu.upf.tickeep.fragments.*
 import edu.upf.tickeep.model.User
 import kotlinx.android.synthetic.main.activity_nav.*
 import kotlinx.android.synthetic.main.content_main.*
@@ -71,7 +68,12 @@ class nav_activity : AppCompatActivity() , NavigationView.OnNavigationItemSelect
         menuInflater.inflate(R.menu.nav_menuoptions, menu)
         txtuser = findViewById(R.id.txt_userNav)
         txtEmail = findViewById(R.id.txt_emailNav)
-        //imgNav = findViewById(R.id.img_navheader)
+        imgNav = findViewById(R.id.img_navheader)
+
+        imgNav.setOnClickListener {
+            drawer_layout.closeDrawer(GravityCompat.START)
+            changeFragment(profile())
+        }
         //imgNav.setImageResource(R.mipmap.logo)
 
         val c = edu.upf.tickeep.utils.Constants()

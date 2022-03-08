@@ -61,5 +61,10 @@
     <string name="facebook_app_id">552396355878600</string>
     <string name="fb_login_protocol_scheme">fb552396355878600</string>
     <string name="error_facebook">"Error trying to login with facebook"</string>
-
+    <string name="save">Save</string>
+    <string name="updated_name">Name updated</string>
+    <string name="updated_phone">Phone updated</string>
+    <string name="error_updated">Error updating data </string>
+    <string name="old_password">Old password</string>
+    <string name="update_password">Password updated</string>
 </resources>
